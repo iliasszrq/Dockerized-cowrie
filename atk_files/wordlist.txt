@@ -1,0 +1,6 @@
+1234
+admin
+password
+root
+kali
+test
