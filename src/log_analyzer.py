@@ -3,132 +3,126 @@ import pandas as pd
 import re
 import plotly.express as px
 
-# --- PAGE CONFIG ---
 st.set_page_config(page_title="Cowrie Log Forensics", layout="wide")
-st.title(" Cowrie Honeypot: Raw Log Analysis")
-st.markdown("Generating structured intelligence from unstructured `cowrie.log` data.")
+st.title("🕵️ Cowrie Honeypot: Raw Log Analysis")
 
-# --- PARSING FUNCTION (The Portfolio "Flex") ---
 @st.cache_data
 def parse_cowrie_log(file_path):
     data = []
     
-    # Regex patterns to extract data from the raw text
-    # Pattern for basic connection info
-    ip_pattern = re.compile(r"New connection: ([\d\.]+):")
-    # Pattern for login attempts: [root/123456]
-    login_pattern = re.compile(r"login attempt \[(.*)/(.*)\] (.*)")
-    # Pattern for commands: CMD: ls -la
+    # REGEX PATTERNS
+    # 1. Catch: b'root' failed auth b'password'
+    auth_pattern = re.compile(r"b'(.+?)' failed auth b'(.+?)'")
+    
+    # 2. Catch: login attempt [root/password] (Older cowrie versions)
+    legacy_pattern = re.compile(r"login attempt \[(.*)/(.*)\]")
+    
+    # 3. Catch: CMD: ls -la
     cmd_pattern = re.compile(r"CMD: (.*)")
     
+    # 4. Catch IPs from: [HoneyPotSSHTransport,12,192.168.1.5]
+    ip_pattern = re.compile(r"HoneyPotSSHTransport,\d+,([\d\.]+)")
+
     try:
         with open(file_path, 'r') as f:
             for line in f:
-                timestamp = line[:23] # Extract roughly the first 23 chars for time
+                # Extract timestamp (First 23 chars)
+                timestamp = line[:23]
                 
-                # 1. Check for Login Attempts
-                login_match = login_pattern.search(line)
-                if login_match:
+                # CHECK FOR PASSWORDS
+                match_auth = auth_pattern.search(line)
+                match_legacy = legacy_pattern.search(line)
+                
+                if match_auth:
                     data.append({
                         "timestamp": timestamp,
                         "type": "Login Attempt",
-                        "src_ip": "Unknown (Session Linked)", # Text logs make mapping IP to every line hard without session ID logic, this is simplified
-                        "user": login_match.group(1),
-                        "password": login_match.group(2),
-                        "status": login_match.group(3), # succeeded or failed
+                        "user": match_auth.group(1),
+                        "password": match_auth.group(2),
+                        "command": None
+                    })
+                    continue
+                elif match_legacy:
+                    data.append({
+                        "timestamp": timestamp, 
+                        "type": "Login Attempt", 
+                        "user": match_legacy.group(1), 
+                        "password": match_legacy.group(2), 
                         "command": None
                     })
                     continue
 
-                # 2. Check for Commands (Post-Compromise)
+                # CHECK FOR COMMANDS
                 cmd_match = cmd_pattern.search(line)
                 if cmd_match:
                     data.append({
                         "timestamp": timestamp,
                         "type": "Command Execution",
-                        "src_ip": "Unknown (Session Linked)",
                         "user": None,
                         "password": None,
-                        "status": None,
                         "command": cmd_match.group(1)
                     })
                     continue
-                    
-                # 3. Check for Connections (to get IPs)
-                # Note: In text logs, IPs appear on the "New connection" line. 
-                # For a simple dashboard, we extract all unique IPs found in the logs.
+
+                # CHECK FOR CONNECTIONS (To get IPs)
                 ip_match = ip_pattern.search(line)
                 if ip_match:
                      data.append({
                         "timestamp": timestamp,
                         "type": "New Connection",
-                        "src_ip": ip_match.group(1),
-                        "user": None,
-                        "password": None,
-                        "status": None,
-                        "command": None
+                        "user": None, 
+                        "password": None, 
+                        "command": None,
+                        "src_ip": ip_match.group(1)
                     })
 
-        return pd.DataFrame(data)
+        df = pd.DataFrame(data)
+        return df
+
     except FileNotFoundError:
         st.error(f"Could not find file: {file_path}")
         return pd.DataFrame()
 
-# --- LOAD DATA ---
-# CHANGE THIS path if your file is in a subfolder
+# LOAD DATA
+# Ensure this points to where your log file actually is
 df = parse_cowrie_log("logs/cowrie.log") 
 
 if not df.empty:
-    # --- METRICS ROW ---
+    # KPI METRICS
+    st.success(f"Loaded {len(df)} events.")
+    
+    logins = df[df['type'] == "Login Attempt"]
+    cmds = df[df['type'] == "Command Execution"]
+    
     col1, col2, col3 = st.columns(3)
-    
-    # Calculate metrics
-    total_conns = df[df['type'] == "New Connection"].shape[0]
-    unique_ips = df[df['type'] == "New Connection"]['src_ip'].nunique()
-    cmds_executed = df[df['type'] == "Command Execution"].shape[0]
-    
-    col1.metric("Total Connections", total_conns)
-    col2.metric("Unique Attacker IPs", unique_ips)
-    col3.metric("Commands Executed", cmds_executed)
+    col1.metric("Total Events", len(df))
+    col2.metric("Brute Force Attempts", len(logins))
+    col3.metric("Commands Executed", len(cmds))
 
     st.divider()
 
-    # --- BRUTE FORCE ANALYSIS ---
+    # CHARTS
     c1, c2 = st.columns(2)
     
-    # Filter for logins
-    logins = df[df['type'] == "Login Attempt"]
-    
-    if not logins.empty:
-        with c1:
-            st.subheader("Top Attacked Usernames")
-            top_users = logins['user'].value_counts().head(10)
-            st.bar_chart(top_users)
+    with c1:
+        st.subheader("Top Attacked Usernames")
+        if not logins.empty:
+            st.bar_chart(logins['user'].value_counts().head(10))
+        else:
+            st.info("No logins captured yet.")
+
+    with c2:
+        st.subheader("Top Passwords Tried")
+        if not logins.empty:
+            st.bar_chart(logins['password'].value_counts().head(10))
             
-        with c2:
-            st.subheader("Top Passwords Tried")
-            top_pass = logins['password'].value_counts().head(10)
-            st.bar_chart(top_pass)
-    else:
-        st.info("No login attempts found in logs yet.")
-
-    # --- ATTACKER ACTIVITY (COMMANDS) ---
+    # COMMANDS TABLE
     st.divider()
-    st.subheader("Attacker Activity (Commands Executed)")
-    st.caption("This table shows what the attacker did after gaining access.")
-    
-    commands = df[df['type'] == "Command Execution"][['timestamp', 'command']]
-    
-    if not commands.empty:
-        st.table(commands)
+    st.subheader("🚨 Attacker Commands")
+    if not cmds.empty:
+        st.table(cmds[['timestamp', 'command']])
     else:
-        st.success("No commands executed (Attacker may have failed to login).")
-
-    # --- IP LIST ---
-    st.divider()
-    with st.expander("View All Attacker IPs"):
-        ips = df[df['type'] == "New Connection"]['src_ip'].value_counts()
-        st.dataframe(ips)
+        st.info("No shell commands executed.")
 
 else:
-    st.warning("Please verify 'cowrie.log' is in the directory.")
+    st.warning("Log file is empty or not found.")
