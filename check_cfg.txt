@@ -1,0 +1,23 @@
+[honeypot]
+hostname = srv04
+log_path = var/log/cowrie
+# FORCE the use of the file database
+auth_class = UserDB
+
+[ssh]
+enabled = true
+listen_endpoints = tcp:2222:interface=0.0.0.0
+# STRICTLY disable "allow any"
+auth_none_enabled = false
+
+[output_mysql]
+enabled = false
+
+[output_textlog]
+enabled = true
+logfile = var/log/cowrie/cowrie.log
+format = text
+
+[output_jsonlog]
+enabled = true
+logfile = var/log/cowrie/cowrie.json

@@ -1,0 +1,57 @@
+2025-11-25T16:25:53.647372Z 2db9a4e2bd01 New connection: 172.23.0.1:54536 (172.23.0.2:2222) [session: 2db9a4e2bd01]
+2025-11-25T16:25:53.648075Z 2db9a4e2bd01 Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:25:53.700833Z 2db9a4e2bd01 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:25:53.838258Z 2db9a4e2bd01 Connection lost after 0.2 seconds
+2025-11-25T16:26:04.070794Z 0fba2d4bb709 New connection: 172.23.0.1:46358 (172.23.0.2:2222) [session: 0fba2d4bb709]
+2025-11-25T16:26:04.071330Z 0fba2d4bb709 Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:26:04.122568Z 0fba2d4bb709 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:26:08.030078Z 0fba2d4bb709 login attempt [root/sdhchsbcs] succeeded
+2025-11-25T16:26:08.265152Z 0fba2d4bb709 Terminal Size: 80 24
+2025-11-25T16:26:08.265482Z 0fba2d4bb709 request_env: LANG=en_US.UTF-8
+2025-11-25T16:26:08.265586Z 0fba2d4bb709 request_env: COLORTERM=truecolor
+2025-11-25T16:26:08.266591Z 0fba2d4bb709 ()
+2025-11-25T16:26:19.987125Z 0fba2d4bb709 CMD: exit
+2025-11-25T16:26:19.989363Z 0fba2d4bb709 Closing TTY Log: var/lib/cowrie/tty/2638f1c1c2018567a46a4cae049dd90db2d468e1538d60d328f2707d071f73c5 after 11.7 seconds
+2025-11-25T16:26:20.048349Z 0fba2d4bb709 Connection lost after 16.0 seconds
+2025-11-25T16:26:25.000666Z 440647bc104c New connection: 172.23.0.1:58342 (172.23.0.2:2222) [session: 440647bc104c]
+2025-11-25T16:26:25.002605Z 440647bc104c Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:26:25.053469Z 440647bc104c SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:26:27.286604Z 440647bc104c login attempt [admin/jsdcjhnsdcj] failed
+2025-11-25T16:26:32.161937Z 440647bc104c login attempt [admin/12345] failed
+2025-11-25T16:26:37.483706Z 440647bc104c login attempt [admin/12345] failed
+2025-11-25T16:26:38.532017Z 440647bc104c Connection lost after 13.5 seconds
+2025-11-25T16:32:51.759742Z d176a1b7f633 New connection: 172.23.0.1:50630 (172.23.0.2:2222) [session: d176a1b7f633]
+2025-11-25T16:32:51.760131Z d176a1b7f633 Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:32:51.762251Z d176a1b7f633 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:32:51.807443Z d176a1b7f633 Connection lost after 0.0 seconds
+2025-11-25T16:32:56.195666Z d72371b85781 New connection: 172.23.0.1:60706 (172.23.0.2:2222) [session: d72371b85781]
+2025-11-25T16:32:56.196012Z d72371b85781 Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:32:56.198580Z d72371b85781 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:33:02.328896Z d72371b85781 login attempt [admin/12345] failed
+2025-11-25T16:33:23.285814Z d72371b85781 Connection lost after 27.1 seconds
+2025-11-25T16:33:30.735484Z 9fa6ff27f16e New connection: 172.23.0.1:37000 (172.23.0.2:2222) [session: 9fa6ff27f16e]
+2025-11-25T16:33:30.735763Z 9fa6ff27f16e Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:33:30.737618Z 9fa6ff27f16e SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:33:33.193802Z 9fa6ff27f16e login attempt [root/fqfds] succeeded
+2025-11-25T16:33:33.220253Z 9fa6ff27f16e Terminal Size: 111 29
+2025-11-25T16:33:33.220704Z 9fa6ff27f16e request_env: COLORTERM=truecolor
+2025-11-25T16:33:33.220971Z 9fa6ff27f16e request_env: LANG=en_US.UTF-8
+2025-11-25T16:33:33.222189Z 9fa6ff27f16e ()
+2025-11-25T16:36:33.299382Z 9fa6ff27f16e Connection lost after 182.6 seconds
+2025-11-25T16:38:32.016421Z 03a484299e56 New connection: 172.23.0.1:53594 (172.23.0.2:2222) [session: 03a484299e56]
+2025-11-25T16:38:32.016939Z 03a484299e56 Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:38:32.019504Z 03a484299e56 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:38:39.958726Z 03a484299e56 login attempt [root/sdfsdf] failed
+2025-11-25T16:39:00.471100Z 03a484299e56 login attempt [root/ffff] failed
+2025-11-25T16:39:02.413384Z 03a484299e56 login attempt [root/ffff] failed
+2025-11-25T16:39:03.421035Z 03a484299e56 Connection lost after 31.4 seconds
+2025-11-25T16:39:23.709478Z d1eb53e6a7bf New connection: 172.23.0.1:39506 (172.23.0.2:2222) [session: d1eb53e6a7bf]
+2025-11-25T16:39:23.709849Z d1eb53e6a7bf Remote SSH version: SSH-2.0-OpenSSH_10.0p2 Debian-8
+2025-11-25T16:39:23.712664Z d1eb53e6a7bf SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-25T16:39:26.617638Z d1eb53e6a7bf login attempt [admin/12345] succeeded
+2025-11-25T16:39:26.643833Z d1eb53e6a7bf Terminal Size: 111 29
+2025-11-25T16:39:26.644624Z d1eb53e6a7bf request_env: COLORTERM=truecolor
+2025-11-25T16:39:26.645025Z d1eb53e6a7bf request_env: LANG=en_US.UTF-8
+2025-11-25T16:39:26.646145Z d1eb53e6a7bf ()
+2025-11-25T16:39:28.978842Z d1eb53e6a7bf CMD: ls
+2025-11-25T16:42:28.822665Z d1eb53e6a7bf Connection lost after 185.1 seconds

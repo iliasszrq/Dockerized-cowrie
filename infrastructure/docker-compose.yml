@@ -5,7 +5,9 @@ services:
     ports:
       - "2222:2222"
     volumes:
-      - ../logs:/cowrie/cowrie-git/var/log/cowrie
+      - ../cowrie.log:/cowrie/cowrie-git/cowrie.log
       - ../downloads:/cowrie/cowrie-git/var/lib/cowrie/downloads
       - ./cowrie.cfg:/cowrie/cowrie-git/etc/cowrie.cfg
+      # Final correct mount path for authentication database:
+      - ./userdb.txt:/cowrie/cowrie-git/etc/userdb.txt
     restart: always
