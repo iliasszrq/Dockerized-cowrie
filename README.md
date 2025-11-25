@@ -14,7 +14,7 @@ For this group project, we simulated an internal network breach scenario.
 **I** deployed a **Cowrie SSH Honeypot** inside a Docker container and isolated it on a private **ZeroTier** network. My partner acted as the **Attacker** to breach the system, while I acted as the **Defender**, focusing on infrastructure, log ingestion, and forensic analysis.
 
 **Note on Tool Selection:**
-* **ELK Stack:** We initially attempted to use Elasticsearch for logging, but it consumed >4GB RAM. I replaced it with a custom **Python/Streamlit** parser.
+* **ELK Stack:** We initially attempted to use Elasticsearch for logging, but it consumed >4GB RAM. I replaced it with a **Python log parser** and a **Streamlit dashboard** for visualization.
 *  We debated using **Wireshark** and **Fail2Ban** but deemed them unnecessary for this specific simulation but they can be a further addition in this project later on.
 
 ---
