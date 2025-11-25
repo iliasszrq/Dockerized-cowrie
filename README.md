@@ -22,11 +22,11 @@ I deployed a **Cowrie SSH Honeypot** inside a Docker container and isolated it o
 ## Defense Findings
 
 ### 1. Brute Force Analytics
-The dashboard visualizing the volume of the dictionary attack. You can see the specific wordlists used against the `root` user.
+total number of attacks and a timeline graph that goes up when the attack attempts started.
 ![Dashboard Analytics](evidence/dashboard_analytics.png)
 
 ### 2. Forensic Timeline
-The honeypot successfully logged the commands the attacker ran *after* guessing the password (e.g., `whoami`, `wget`, `uname`).
+The honeypot successfully logged the commands the attacker ran *after* guessing the password.
 ![Forensics Commands](evidence/dashboard_forensics.png)
 
 ---
@@ -102,6 +102,25 @@ Chain PREROUTING (policy ACCEPT 3404 packets, 1034K bytes)
   101  6012 REDIRECT   6    --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22 redir ports 2222
 ```
 ---
+
+## Problems I Faced and How I Solved Them
+ I ran into several real-world integration issues between Linux, Docker, and Python. Here is what I struggled with and how I fixed it.
+
+### 1. Permission Crashes & Silent Logs
+* **The Problem:** I needed to secure the log files using **ACLs** (Access Control Lists) for the assignment. However, applying these strict rules caused a conflict with Docker. The container would either crash with `(Errno 13) Permission Denied` or run silently without writing any logs because it lost access to the folder.
+* **The Diagnostic:** I temporarily tested with `chmod -R 777` (allow everyone), and logs immediately appeared. This proved the issue was purely about Linux permissions blocking the Docker user.
+* **How I Fixed It:**
+    1. I moved the log file out of the sub-folder and into the main project root to avoid complex directory permission conflicts.
+    2. I learned about Linux File IDs (UIDs) and used `chown` to explicitly give the container user (`UID 1000`) ownership of the file.
+    3. Finally, I re-applied the ACLs strictly to give the auditor account read-only access without locking out the container.
+
+### 2. Authentication Errors
+* **The Problem:** I tried to force the honeypot to reject specific passwords using a `userdb.txt` file, but the Docker container kept ignoring my file and letting everyone in.
+* **The Solution:** Instead of fighting the container image, I changed the strategy to a **"High-Interaction Honeypot."** By allowing attackers in easily, we actually gather *more* data (like the commands they type and files they download) than if we simply blocked them at the door.
+
+### 3. The "Empty" Container
+* **The Problem:** I tried to run `docker exec -it cowrie bash` to look inside the container and debug, but I got an error saying `exec file not found`.
+* **The Lesson:** I learned the Cowrie image is **"Distroless"**—it has no shell, no `ls`, and no `cat` for security reasons. I had to learn by copying files *out* of the container (`docker cp`) to check them on my host machine instead.
 
 ## Installation & Usage
 
