@@ -31,7 +31,7 @@ The honeypot successfully logged the commands the attacker ran *after* guessing 
 
 ---
 
-## Attack Simulation (Red Team)
+## Attack Simulation
 *Tools used: Nmap, Hydra*
 
 ### Step 1: Reconnaissance
@@ -85,7 +85,6 @@ drwxr-xr-x 1 root root 4096 2013-04-05 12:02 ..
 drwxr-xr-x 1 9673 9673 4096 2025-11-25 22:03 ihab
 -rw-r--r-- 1 9673 9673    0 2025-11-25 22:03 iliass.txt
 ```
-![Exfiltration](evidence/red_team_exfiltration.png)
 
 ---
 
@@ -189,13 +188,4 @@ python3 -m venv myenv
 source myenv/bin/activate 
 pip install -r requirements.txt # Dashboard Reauirements
 python3 -m streamlit run src/log_analyzer.py # Launch
-```
-### Part 3:Attacker Setup
-Since almost all packages are pre-installed in kali already, the attacked only sets up nmap.
-```bash
-# Update package list
-sudo apt update
-
-# Install Nmap (Scanner) and Hydra (Brute Force)
-sudo apt install -y nmap hydra
 ```
