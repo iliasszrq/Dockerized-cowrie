@@ -176,7 +176,7 @@ sudo systemctl enable --now docker # Enable docker service
 sudo usermod -aG docker $USER # Restart VM after adding user to Docker group to apply permissions
 
 # Start the container
-docker-compose -f infrastructure/docker-compose.yml up -d
+docker compose -f infrastructure/docker-compose.yml up -d
 
 # Check Status
 docker ps
