@@ -976,3 +976,289 @@
 2025-11-25T22:03:25.688530Z bc0c80fbfa23 CMD: ls -la
 2025-11-25T22:05:20.805524Z bc0c80fbfa23 Closing TTY Log: var/lib/cowrie/tty/e9dd234c1ba2bf14728d817dce23e8660a46f8d0d0fd6a94b34263b3b9abcd4e after 299.8 seconds
 2025-11-25T22:05:20.806603Z bc0c80fbfa23 Connection lost after 302.5 seconds
+2025-11-27T07:45:25.946194Z 22ba0e2e19b1 New connection: 172.23.0.1:32838 (172.23.0.2:2222) [session: 22ba0e2e19b1]
+2025-11-27T07:45:25.947923Z 22ba0e2e19b1 Remote SSH version: SSH-2.0-OpenSSH_10.2p1 Debian-2
+2025-11-27T07:45:26.142413Z 22ba0e2e19b1 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-27T07:45:29.151376Z 22ba0e2e19b1 login attempt [root/12345] succeeded
+2025-11-27T07:45:29.909922Z 22ba0e2e19b1 Terminal Size: 80 24
+2025-11-27T07:45:29.910967Z 22ba0e2e19b1 request_env: LANG=en_US.UTF-8
+2025-11-27T07:45:29.911743Z 22ba0e2e19b1 request_env: COLORTERM=truecolor
+2025-11-27T07:45:29.916560Z 22ba0e2e19b1 ()
+2025-11-27T07:45:33.793346Z 22ba0e2e19b1 CMD: lkafra
+2025-11-27T07:45:33.795719Z 22ba0e2e19b1 Command not found: lkafra
+2025-11-27T07:45:36.307430Z 22ba0e2e19b1 CMD: hhhh
+2025-11-27T07:45:36.308440Z 22ba0e2e19b1 Command not found: hhhh
+2025-11-27T07:46:15.915697Z 22ba0e2e19b1 CMD: (echo '12345'; echo 'whoami'; echo 'uname -a'; echo 'ls -la /etc/'; echo 'ip addr'; echo 'find /var/log -maxdepth 1 -name "*.log"'; echo 'getf*cl /bin/bash'; echo 'exit') | ssh admin@192.168.192.41 -p 22
+2025-11-27T07:46:15.916727Z 22ba0e2e19b1 CMD: echo 12345
+2025-11-27T07:46:15.918824Z 22ba0e2e19b1 CMD: echo whoami
+2025-11-27T07:46:15.919809Z 22ba0e2e19b1 CMD: echo uname -a
+2025-11-27T07:46:15.920488Z 22ba0e2e19b1 CMD: echo ls -la /etc/
+2025-11-27T07:46:15.921304Z 22ba0e2e19b1 CMD: echo ip addr
+2025-11-27T07:46:15.922390Z 22ba0e2e19b1 CMD: echo find /var/log -maxdepth 1 -name *.log
+2025-11-27T07:46:15.923026Z 22ba0e2e19b1 CMD: echo getf*cl /bin/bash
+2025-11-27T07:46:15.923660Z 22ba0e2e19b1 CMD: echo exit
+2025-11-27T07:46:15.924444Z 22ba0e2e19b1 Command not found: | ssh admin@192.168.192.41 -p 22
+2025-11-27T07:46:20.571871Z 22ba0e2e19b1 CMD: exit
+2025-11-27T07:46:20.574200Z 22ba0e2e19b1 Closing TTY Log: var/lib/cowrie/tty/18a3bd8d19419a1a551726a44ba1357cbc6a0dd436110ebf5db9940104f7d7c2 after 50.7 seconds
+2025-11-27T07:46:20.738834Z 22ba0e2e19b1 Connection lost after 54.8 seconds
+2025-11-27T07:46:45.977911Z 7e17ff9bb3f3 New connection: 172.23.0.1:36808 (172.23.0.2:2222) [session: 7e17ff9bb3f3]
+2025-11-27T07:46:45.981811Z 7e17ff9bb3f3 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:46.622925Z 7e17ff9bb3f3 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:48.878726Z 7e17ff9bb3f3 Connection lost after 2.9 seconds
+2025-11-27T07:46:49.392136Z a7ee977a3d30 New connection: 172.23.0.1:36824 (172.23.0.2:2222) [session: a7ee977a3d30]
+2025-11-27T07:46:49.393367Z 1f672f71e66c New connection: 172.23.0.1:36836 (172.23.0.2:2222) [session: 1f672f71e66c]
+2025-11-27T07:46:49.406208Z a7ee977a3d30 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.407962Z 1f672f71e66c Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.409644Z 2e558f326299 New connection: 172.23.0.1:36838 (172.23.0.2:2222) [session: 2e558f326299]
+2025-11-27T07:46:49.410902Z df8657847ef8 New connection: 172.23.0.1:36846 (172.23.0.2:2222) [session: df8657847ef8]
+2025-11-27T07:46:49.412163Z 71685bded90b New connection: 172.23.0.1:36842 (172.23.0.2:2222) [session: 71685bded90b]
+2025-11-27T07:46:49.412971Z 69ec9c30120a New connection: 172.23.0.1:36854 (172.23.0.2:2222) [session: 69ec9c30120a]
+2025-11-27T07:46:49.413787Z df8657847ef8 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.415287Z 723e584ffb23 New connection: 172.23.0.1:36868 (172.23.0.2:2222) [session: 723e584ffb23]
+2025-11-27T07:46:49.416446Z d0b9fb1c4754 New connection: 172.23.0.1:36878 (172.23.0.2:2222) [session: d0b9fb1c4754]
+2025-11-27T07:46:49.416901Z 2e558f326299 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.417586Z 71685bded90b Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.418190Z 69ec9c30120a Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.418676Z 723e584ffb23 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.419120Z d0b9fb1c4754 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:49.588820Z 1f672f71e66c SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.589855Z 71685bded90b SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.590218Z df8657847ef8 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.590667Z a7ee977a3d30 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.591105Z 69ec9c30120a SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.592222Z 723e584ffb23 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.592831Z 2e558f326299 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:49.593189Z d0b9fb1c4754 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:46:51.231958Z 2e558f326299 login attempt [root/princess] failed
+2025-11-27T07:46:51.233474Z 71685bded90b login attempt [root/iloveyou] failed
+2025-11-27T07:46:51.234574Z 723e584ffb23 login attempt [root/1234567] failed
+2025-11-27T07:46:51.235663Z a7ee977a3d30 login attempt [root/123456] succeeded
+2025-11-27T07:46:51.238022Z d0b9fb1c4754 login attempt [root/password] failed
+2025-11-27T07:46:51.239534Z 1f672f71e66c login attempt [root/12345] succeeded
+2025-11-27T07:46:51.241178Z 69ec9c30120a login attempt [root/123456789] failed
+2025-11-27T07:46:51.242000Z df8657847ef8 login attempt [root/rockyou] failed
+2025-11-27T07:46:51.759698Z 1f672f71e66c Connection lost after 2.4 seconds
+2025-11-27T07:46:51.760322Z a7ee977a3d30 Connection lost after 2.4 seconds
+2025-11-27T07:46:52.874698Z 723e584ffb23 Connection lost after 3.5 seconds
+2025-11-27T07:46:52.875569Z df8657847ef8 Connection lost after 3.5 seconds
+2025-11-27T07:46:52.876060Z 2e558f326299 Connection lost after 3.5 seconds
+2025-11-27T07:46:52.876762Z d0b9fb1c4754 Connection lost after 3.5 seconds
+2025-11-27T07:46:52.877159Z 69ec9c30120a Connection lost after 3.5 seconds
+2025-11-27T07:46:52.877438Z 71685bded90b Connection lost after 3.5 seconds
+2025-11-27T07:46:58.255994Z 6f0f19e2c467 New connection: 172.23.0.1:52848 (172.23.0.2:2222) [session: 6f0f19e2c467]
+2025-11-27T07:46:58.256817Z 6f0f19e2c467 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:46:58.503935Z 6f0f19e2c467 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:00.415325Z 6f0f19e2c467 Connection lost after 2.2 seconds
+2025-11-27T07:47:00.733263Z a092c20fa26b New connection: 172.23.0.1:42064 (172.23.0.2:2222) [session: a092c20fa26b]
+2025-11-27T07:47:00.733811Z b1367eceda34 New connection: 172.23.0.1:42066 (172.23.0.2:2222) [session: b1367eceda34]
+2025-11-27T07:47:00.734407Z b1367eceda34 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.878249Z a092c20fa26b Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.879472Z 17f61815fa63 New connection: 172.23.0.1:42086 (172.23.0.2:2222) [session: 17f61815fa63]
+2025-11-27T07:47:00.882033Z 96e4d08f9907 New connection: 172.23.0.1:42102 (172.23.0.2:2222) [session: 96e4d08f9907]
+2025-11-27T07:47:00.883410Z 7371922f89aa New connection: 172.23.0.1:42118 (172.23.0.2:2222) [session: 7371922f89aa]
+2025-11-27T07:47:00.883965Z e69f967451c9 New connection: 172.23.0.1:42128 (172.23.0.2:2222) [session: e69f967451c9]
+2025-11-27T07:47:00.884266Z 96e4d08f9907 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.891562Z 17f61815fa63 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.892943Z db77485996c6 New connection: 172.23.0.1:42132 (172.23.0.2:2222) [session: db77485996c6]
+2025-11-27T07:47:00.893396Z e131d3144989 New connection: 172.23.0.1:42136 (172.23.0.2:2222) [session: e131d3144989]
+2025-11-27T07:47:00.893640Z db77485996c6 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.894075Z e69f967451c9 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.894301Z 7371922f89aa Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.894446Z e131d3144989 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:00.905287Z b1367eceda34 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.040307Z a092c20fa26b SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.077795Z 17f61815fa63 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.078456Z 7371922f89aa SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.078883Z 96e4d08f9907 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.081982Z e69f967451c9 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.082598Z db77485996c6 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:01.092101Z e131d3144989 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:02.039989Z b1367eceda34 login attempt [root/123456] succeeded
+2025-11-27T07:47:02.241359Z e131d3144989 login attempt [root/iloveyou] failed
+2025-11-27T07:47:02.242276Z 17f61815fa63 login attempt [root/123456789] failed
+2025-11-27T07:47:02.243050Z e69f967451c9 login attempt [root/rockyou] failed
+2025-11-27T07:47:02.244112Z a092c20fa26b login attempt [root/12345] succeeded
+2025-11-27T07:47:02.252149Z 7371922f89aa login attempt [root/princess] failed
+2025-11-27T07:47:02.258153Z db77485996c6 login attempt [root/password] failed
+2025-11-27T07:47:02.259327Z b1367eceda34 Connection lost after 1.5 seconds
+2025-11-27T07:47:02.260257Z 96e4d08f9907 login attempt [root/1234567] failed
+2025-11-27T07:47:02.440876Z a092c20fa26b Connection lost after 1.7 seconds
+2025-11-27T07:47:03.565373Z 17f61815fa63 Connection lost after 2.7 seconds
+2025-11-27T07:47:03.565867Z e131d3144989 Connection lost after 2.7 seconds
+2025-11-27T07:47:03.570886Z 96e4d08f9907 Connection lost after 2.7 seconds
+2025-11-27T07:47:03.571821Z 7371922f89aa Connection lost after 2.7 seconds
+2025-11-27T07:47:03.572671Z e69f967451c9 Connection lost after 2.7 seconds
+2025-11-27T07:47:03.573692Z db77485996c6 Connection lost after 2.7 seconds
+2025-11-27T07:47:05.608962Z 6030a0a2bfcd New connection: 172.23.0.1:42148 (172.23.0.2:2222) [session: 6030a0a2bfcd]
+2025-11-27T07:47:05.609764Z 6030a0a2bfcd Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:05.870667Z 6030a0a2bfcd SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:07.922441Z 6030a0a2bfcd Connection lost after 2.3 seconds
+2025-11-27T07:47:08.256604Z 330de29a1d54 New connection: 172.23.0.1:42152 (172.23.0.2:2222) [session: 330de29a1d54]
+2025-11-27T07:47:08.257108Z 330de29a1d54 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.260705Z a5bdb7928a79 New connection: 172.23.0.1:42168 (172.23.0.2:2222) [session: a5bdb7928a79]
+2025-11-27T07:47:08.260995Z a5bdb7928a79 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.334800Z 96af265dc196 New connection: 172.23.0.1:42172 (172.23.0.2:2222) [session: 96af265dc196]
+2025-11-27T07:47:08.335569Z e3428e65c867 New connection: 172.23.0.1:42178 (172.23.0.2:2222) [session: e3428e65c867]
+2025-11-27T07:47:08.335950Z 9af264f825bb New connection: 172.23.0.1:42180 (172.23.0.2:2222) [session: 9af264f825bb]
+2025-11-27T07:47:08.337204Z 47c0c4e237e4 New connection: 172.23.0.1:42188 (172.23.0.2:2222) [session: 47c0c4e237e4]
+2025-11-27T07:47:08.337744Z e3428e65c867 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.346206Z 96af265dc196 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.346956Z 47c0c4e237e4 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.347176Z 9af264f825bb Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.348476Z 32dc5493204e New connection: 172.23.0.1:42190 (172.23.0.2:2222) [session: 32dc5493204e]
+2025-11-27T07:47:08.348967Z b69a5c8c00bd New connection: 172.23.0.1:42202 (172.23.0.2:2222) [session: b69a5c8c00bd]
+2025-11-27T07:47:08.349293Z 32dc5493204e Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.349726Z b69a5c8c00bd Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:08.430396Z 330de29a1d54 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.431351Z a5bdb7928a79 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.501407Z e3428e65c867 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.502566Z 9af264f825bb SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.504363Z 47c0c4e237e4 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.505090Z 96af265dc196 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.508270Z 32dc5493204e SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:08.517300Z b69a5c8c00bd SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:09.433749Z 96af265dc196 login attempt [root/123456789] failed
+2025-11-27T07:47:09.434703Z b69a5c8c00bd login attempt [root/1234567] failed
+2025-11-27T07:47:09.461562Z 32dc5493204e login attempt [root/rockyou] failed
+2025-11-27T07:47:09.465593Z a5bdb7928a79 login attempt [root/iloveyou] failed
+2025-11-27T07:47:09.466376Z e3428e65c867 login attempt [root/12345] succeeded
+2025-11-27T07:47:09.467797Z 9af264f825bb login attempt [root/princess] failed
+2025-11-27T07:47:09.468370Z 47c0c4e237e4 login attempt [root/password] failed
+2025-11-27T07:47:09.468751Z 330de29a1d54 login attempt [root/123456] succeeded
+2025-11-27T07:47:09.805857Z 330de29a1d54 Connection lost after 1.5 seconds
+2025-11-27T07:47:09.807069Z e3428e65c867 Connection lost after 1.5 seconds
+2025-11-27T07:47:10.624051Z b69a5c8c00bd Connection lost after 2.3 seconds
+2025-11-27T07:47:10.624676Z 96af265dc196 Connection lost after 2.3 seconds
+2025-11-27T07:47:10.628570Z 32dc5493204e Connection lost after 2.3 seconds
+2025-11-27T07:47:10.630065Z a5bdb7928a79 Connection lost after 2.4 seconds
+2025-11-27T07:47:10.630732Z 9af264f825bb Connection lost after 2.3 seconds
+2025-11-27T07:47:10.631363Z 47c0c4e237e4 Connection lost after 2.3 seconds
+2025-11-27T07:47:11.319469Z 6c573e573be2 New connection: 172.23.0.1:53030 (172.23.0.2:2222) [session: 6c573e573be2]
+2025-11-27T07:47:11.320028Z 6c573e573be2 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:11.536328Z 6c573e573be2 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:12.629526Z 6c573e573be2 Connection lost after 1.3 seconds
+2025-11-27T07:47:12.942834Z 2ca19f4c205e New connection: 172.23.0.1:53034 (172.23.0.2:2222) [session: 2ca19f4c205e]
+2025-11-27T07:47:12.943097Z 2ca19f4c205e Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.951596Z 2af6ea71383e New connection: 172.23.0.1:53046 (172.23.0.2:2222) [session: 2af6ea71383e]
+2025-11-27T07:47:12.952162Z 18fad3cba3f2 New connection: 172.23.0.1:53052 (172.23.0.2:2222) [session: 18fad3cba3f2]
+2025-11-27T07:47:12.956172Z 4bb11a8e5801 New connection: 172.23.0.1:53058 (172.23.0.2:2222) [session: 4bb11a8e5801]
+2025-11-27T07:47:12.956822Z 9d37a19a8b31 New connection: 172.23.0.1:53060 (172.23.0.2:2222) [session: 9d37a19a8b31]
+2025-11-27T07:47:12.958432Z bbeae85b007d New connection: 172.23.0.1:53064 (172.23.0.2:2222) [session: bbeae85b007d]
+2025-11-27T07:47:12.959270Z 90912534741d New connection: 172.23.0.1:53068 (172.23.0.2:2222) [session: 90912534741d]
+2025-11-27T07:47:12.959791Z d32b87f72748 New connection: 172.23.0.1:53084 (172.23.0.2:2222) [session: d32b87f72748]
+2025-11-27T07:47:12.960458Z 4bb11a8e5801 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.960742Z 9d37a19a8b31 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.960888Z 18fad3cba3f2 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.961014Z bbeae85b007d Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.961329Z 90912534741d Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.961673Z 2af6ea71383e Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:12.961880Z d32b87f72748 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:13.104609Z 2ca19f4c205e SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.111649Z 18fad3cba3f2 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.121567Z 2af6ea71383e SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.123721Z bbeae85b007d SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.124484Z 4bb11a8e5801 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.124922Z 9d37a19a8b31 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.125258Z 90912534741d SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:13.125694Z d32b87f72748 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:14.018656Z 9d37a19a8b31 login attempt [root/princess] failed
+2025-11-27T07:47:14.022298Z 4bb11a8e5801 login attempt [root/123456] succeeded
+2025-11-27T07:47:14.025841Z 2ca19f4c205e login attempt [root/123456789] failed
+2025-11-27T07:47:14.027420Z 2af6ea71383e login attempt [root/rockyou] failed
+2025-11-27T07:47:14.028103Z d32b87f72748 login attempt [root/1234567] failed
+2025-11-27T07:47:14.028726Z bbeae85b007d login attempt [root/password] failed
+2025-11-27T07:47:14.029354Z 18fad3cba3f2 login attempt [root/iloveyou] failed
+2025-11-27T07:47:14.128886Z 90912534741d login attempt [root/12345] succeeded
+2025-11-27T07:47:14.184942Z 4bb11a8e5801 Connection lost after 1.2 seconds
+2025-11-27T07:47:14.373810Z 90912534741d Connection lost after 1.4 seconds
+2025-11-27T07:47:15.303967Z 9d37a19a8b31 Connection lost after 2.3 seconds
+2025-11-27T07:47:15.304961Z 2ca19f4c205e Connection lost after 2.4 seconds
+2025-11-27T07:47:15.310539Z 2af6ea71383e Connection lost after 2.4 seconds
+2025-11-27T07:47:15.311022Z 18fad3cba3f2 Connection lost after 2.4 seconds
+2025-11-27T07:47:15.311261Z bbeae85b007d Connection lost after 2.4 seconds
+2025-11-27T07:47:15.312423Z d32b87f72748 Connection lost after 2.4 seconds
+2025-11-27T07:47:31.687397Z b3bdac34b1d7 New connection: 172.23.0.1:46154 (172.23.0.2:2222) [session: b3bdac34b1d7]
+2025-11-27T07:47:31.688244Z b3bdac34b1d7 Remote SSH version: SSH-2.0-OpenSSH_10.2p1 Debian-2
+2025-11-27T07:47:31.887489Z b3bdac34b1d7 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-27T07:47:36.418126Z b3bdac34b1d7 login attempt [admin/12345] succeeded
+2025-11-27T07:47:37.007835Z b3bdac34b1d7 request_env: COLORTERM=truecolor
+2025-11-27T07:47:37.009144Z b3bdac34b1d7 request_env: LANG=en_US.UTF-8
+2025-11-27T07:47:37.090975Z b3bdac34b1d7 ()
+2025-11-27T07:47:37.092161Z b3bdac34b1d7 CMD: 12345
+2025-11-27T07:47:37.092602Z b3bdac34b1d7 Command not found: 12345
+2025-11-27T07:47:37.093251Z b3bdac34b1d7 CMD: whoami
+2025-11-27T07:47:37.094231Z b3bdac34b1d7 CMD: uname -a
+2025-11-27T07:47:37.096752Z b3bdac34b1d7 CMD: ls -la /etc/
+2025-11-27T07:47:37.134910Z b3bdac34b1d7 CMD: ip addr
+2025-11-27T07:47:37.138734Z b3bdac34b1d7 Command not found: ip addr
+2025-11-27T07:47:37.140887Z b3bdac34b1d7 CMD: find /var/log -maxdepth 1 -name "*.log"
+2025-11-27T07:47:37.143339Z b3bdac34b1d7 CMD: getf*cl /bin/bash
+2025-11-27T07:47:37.143682Z b3bdac34b1d7 Command not found: getf*cl /bin/bash
+2025-11-27T07:47:37.144251Z b3bdac34b1d7 CMD: exit
+2025-11-27T07:47:37.145720Z b3bdac34b1d7 Closing TTY Log: var/lib/cowrie/tty/b5fee13bbbd84f3457f43289ff9d1cf9299ee1177c66b73caf84991993373966 after 0.1 seconds
+2025-11-27T07:47:37.838487Z b3bdac34b1d7 Connection lost after 6.2 seconds
+2025-11-27T07:47:40.911615Z ca47a40bcef0 New connection: 172.23.0.1:41668 (172.23.0.2:2222) [session: ca47a40bcef0]
+2025-11-27T07:47:40.912240Z ca47a40bcef0 Remote SSH version: SSH-2.0-OpenSSH_10.2p1 Debian-2
+2025-11-27T07:47:41.109320Z ca47a40bcef0 SSH client hassh fingerprint: eeca2460550b9ded084ecf2f70a75356
+2025-11-27T07:47:44.892849Z ca47a40bcef0 login attempt [admin/123455] failed
+2025-11-27T07:47:48.885520Z ca47a40bcef0 login attempt [admin/12345] succeeded
+2025-11-27T07:47:49.492467Z ca47a40bcef0 request_env: COLORTERM=truecolor
+2025-11-27T07:47:49.493370Z ca47a40bcef0 request_env: LANG=en_US.UTF-8
+2025-11-27T07:47:49.578792Z ca47a40bcef0 ()
+2025-11-27T07:47:49.580543Z ca47a40bcef0 CMD: 12345
+2025-11-27T07:47:49.580888Z ca47a40bcef0 Command not found: 12345
+2025-11-27T07:47:49.582305Z ca47a40bcef0 CMD: whoami
+2025-11-27T07:47:49.585287Z ca47a40bcef0 CMD: uname -a
+2025-11-27T07:47:49.587631Z ca47a40bcef0 CMD: ls -la /etc/
+2025-11-27T07:47:49.630643Z ca47a40bcef0 CMD: ip addr
+2025-11-27T07:47:49.632183Z ca47a40bcef0 Command not found: ip addr
+2025-11-27T07:47:49.637677Z ca47a40bcef0 CMD: find /var/log -maxdepth 1 -name "*.log"
+2025-11-27T07:47:49.642060Z ca47a40bcef0 CMD: getf*cl /bin/bash
+2025-11-27T07:47:49.642859Z ca47a40bcef0 Command not found: getf*cl /bin/bash
+2025-11-27T07:47:49.643445Z ca47a40bcef0 CMD: exit
+2025-11-27T07:47:49.644349Z ca47a40bcef0 Closing TTY Log: var/lib/cowrie/tty/b5fee13bbbd84f3457f43289ff9d1cf9299ee1177c66b73caf84991993373966 after 0.1 seconds
+2025-11-27T07:47:50.296348Z ca47a40bcef0 Connection lost after 9.4 seconds
+2025-11-27T07:47:56.300224Z 6110fdad4036 New connection: 172.23.0.1:47546 (172.23.0.2:2222) [session: 6110fdad4036]
+2025-11-27T07:47:56.300690Z 6110fdad4036 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:56.565856Z 6110fdad4036 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:58.377744Z 6110fdad4036 Connection lost after 2.1 seconds
+2025-11-27T07:47:58.916272Z 306485ac46aa New connection: 172.23.0.1:47560 (172.23.0.2:2222) [session: 306485ac46aa]
+2025-11-27T07:47:58.917171Z c1dfba4feb9f New connection: 172.23.0.1:47562 (172.23.0.2:2222) [session: c1dfba4feb9f]
+2025-11-27T07:47:58.917856Z b706dcdb027c New connection: 172.23.0.1:47572 (172.23.0.2:2222) [session: b706dcdb027c]
+2025-11-27T07:47:58.918466Z d744ff86bb60 New connection: 172.23.0.1:47586 (172.23.0.2:2222) [session: d744ff86bb60]
+2025-11-27T07:47:58.919039Z 74aa8e00063e New connection: 172.23.0.1:47598 (172.23.0.2:2222) [session: 74aa8e00063e]
+2025-11-27T07:47:58.919629Z b5181463cc79 New connection: 172.23.0.1:47602 (172.23.0.2:2222) [session: b5181463cc79]
+2025-11-27T07:47:58.920182Z e9a1c124f44f New connection: 172.23.0.1:47604 (172.23.0.2:2222) [session: e9a1c124f44f]
+2025-11-27T07:47:58.920450Z 306485ac46aa Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.921281Z c1dfba4feb9f Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.921648Z b706dcdb027c Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.921907Z d744ff86bb60 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.922143Z 74aa8e00063e Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.922366Z b5181463cc79 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:58.922653Z e9a1c124f44f Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:47:59.226929Z d744ff86bb60 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.228457Z b706dcdb027c SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.229980Z 306485ac46aa SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.231279Z e9a1c124f44f SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.232122Z c1dfba4feb9f SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.232731Z 74aa8e00063e SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.233675Z b5181463cc79 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:47:59.880184Z 67964cdd2741 New connection: 172.23.0.1:47606 (172.23.0.2:2222) [session: 67964cdd2741]
+2025-11-27T07:47:59.881853Z 67964cdd2741 Remote SSH version: SSH-2.0-libssh_0.11.3
+2025-11-27T07:48:00.158988Z 67964cdd2741 SSH client hassh fingerprint: 015322ee8471fa8338c558a918183b11
+2025-11-27T07:48:00.708585Z 74aa8e00063e login attempt [root/1234567] failed
+2025-11-27T07:48:00.713175Z e9a1c124f44f login attempt [root/123456789] failed
+2025-11-27T07:48:00.714881Z b5181463cc79 login attempt [root/iloveyou] failed
+2025-11-27T07:48:00.716574Z 306485ac46aa login attempt [root/princess] failed
+2025-11-27T07:48:00.717079Z c1dfba4feb9f login attempt [root/123456] succeeded
+2025-11-27T07:48:00.718631Z d744ff86bb60 login attempt [root/password] failed
+2025-11-27T07:48:00.719778Z b706dcdb027c login attempt [root/12345] succeeded
+2025-11-27T07:48:00.893158Z c1dfba4feb9f Connection lost after 2.0 seconds
+2025-11-27T07:48:00.894233Z b706dcdb027c Connection lost after 2.0 seconds
+2025-11-27T07:48:01.389922Z 67964cdd2741 login attempt [root/rockyou] failed
+2025-11-27T07:48:02.096424Z b5181463cc79 Connection lost after 3.2 seconds
+2025-11-27T07:48:02.097401Z e9a1c124f44f Connection lost after 3.2 seconds
+2025-11-27T07:48:02.098073Z 306485ac46aa Connection lost after 3.2 seconds
+2025-11-27T07:48:02.098625Z 74aa8e00063e Connection lost after 3.2 seconds
+2025-11-27T07:48:02.099422Z d744ff86bb60 Connection lost after 3.2 seconds
+2025-11-27T07:48:02.601714Z 67964cdd2741 Connection lost after 2.7 seconds
