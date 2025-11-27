@@ -61,7 +61,6 @@ Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak...
 [22][ssh] host: 192.168.192.41   login: root   password: 123456
 [22][ssh] host: 192.168.192.41   login: root   password: 12345
 1 of 1 target successfully completed, 2 valid passwords found
-![SSH Session](evidence/red_team_ssh_session.png)
 ```
 
 ### Step 3: Data Exfiltration
